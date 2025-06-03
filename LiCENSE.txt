@@ -1,0 +1,55 @@
+Devon Griffith Proprietary License
+
+Copyright (c) 2025 Devon Griffith. All rights reserved.
+
+Intellectual Property
+
+All code, binaries, and documentation in this repository are the exclusive property of Devon Griffith.  This software is proprietary and confidential.  No portion of this software is licensed for use except as explicitly agreed in writing by the owner.  The software and its source code are protected under copyright law and international treaties.
+
+Restrictions
+
+No rights or license are granted by this notice.  Without the owner’s prior explicit written permission, you may not use, copy, modify, distribute, sublicense, or create derivative works of this software in any form.  In particular, you may not reverse-engineer, decompile, or disassemble any portion of the software.  Any unauthorized use of the contents of this repository is strictly prohibited.
+
+Licensing Terms
+
+Anyone wishing to use or incorporate this software must obtain a separate license agreement directly from the owner.  Contact Devon Griffith (for example via the GitHub account or email) to negotiate licensing terms and obtain written permission.  No other use is authorized by this license.
+
+Disclaimer of Warranty and Liability
+
+This software is provided “AS IS” and without any warranty, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.  In no event will the author or copyright holder be liable for any damages arising out of the use or inability to use this software, even if advised of the possibility of such damage.
+
+Governing Law
+
+This license is governed by the laws of Ontario, Canada (the owner’s jurisdiction) and by applicable international copyright treaties (e.g. the Berne Convention).
+
+Contact
+
+For licensing inquiries or written permission, please contact Devon Griffith through his GitHub profile or provided contact information.  All terms of use must be negotiated and agreed in writing with the owner before any use of this software.
+
+⸻
+
+Explanation and Best Practices
+
+This proprietary license clearly asserts that Devon Griffith is the sole owner of all repository content and reserves all rights.  By default (absent any license) a GitHub project is already “all rights reserved” under copyright law ￼.  However, explicitly including this license file makes the owner’s intent unambiguous.  As one developer noted, a typical closed‐source notice is:
+
+“Copyright (C) [Holder] – All Rights Reserved. Unauthorized copying of this file … is strictly prohibited. Proprietary and confidential.” ￼
+
+Our license uses similar language to forbid any use, copying, or redistribution without permission ￼ ￼.
+
+The Restrictions section enumerates forbidden actions: no one may use, copy, modify, or distribute the code without Devon’s written consent.  This mirrors practices seen in real proprietary licenses.  For example, MQAttach’s proprietary license states “No redistribution, sublicensing, or reverse engineering is permitted” and that the software is protected by copyright and international treaties ￼ ￼.  We likewise mention that the software is protected by international copyright law ￼.  Phrases like “explicit prior written permission” are standard (see SophisticatedCore’s license, which forbids commercial use “without explicit written permission from the author” ￼).  Citing sources: this license text uses that concept to bar all unauthorized use.
+
+The Licensing clause requires users to contact the owner to negotiate a license.  This follows examples where proprietors invite direct negotiation.  For instance, the MQAttach license directs users to contact the author for licensing inquiries ￼.  We similarly instruct anyone interested in using the code to reach out to Devon Griffith for a license.  Until such an agreement is made, no rights are granted.
+
+The Disclaimer of Warranty and Liability is important for any license.  We expressly disclaim warranties and limit liability, as in many licenses.  The kolappannathan closed-source template disclaims all warranties (“provided ‘AS IS’ without warranty of any kind”) and denies liability ￼.  We include a similar provision so the owner is not liable for damages from misuse.
+
+In Governing Law, we specify the owner’s jurisdiction and reference international treaties.  While not always included in a simple license file, stating the governing law can strengthen enforceability.  Referencing international treaties (like the Berne Convention) underscores that copyright protections extend globally ￼.  Our wording anchors the license to Ontario law and “applicable international copyright treaties,” reflecting best practices.
+
+Applying This License on GitHub
+
+To apply this license across GitHub repositories, include it as LICENSE.md in each repository’s root.  GitHub and other tools recognize common license files when placed at the root ￼.  The GitHub documentation recommends having a license file (e.g. LICENSE.md) in the repository root as a best practice ￼.  Even though a public repo without a license is already “all rights reserved” by default ￼, explicitly adding this license file clarifies the owner’s terms for anyone who views or forks the repository.  The README or project homepage should also mention the license and link to the LICENSE file, to make it clear that the code is proprietary.
+
+If the code truly must remain proprietary, consider setting the repository to private.  The GitHub docs note that public repos allow anyone to fork or copy the code for personal use (since users “have the right to view and fork” a public repo ￼).  Making the repo private prevents unauthorized access altogether.  However, if the repo is public (for example, to share non-sensitive parts of the project), this license text ensures no one can legally reuse the code without permission.
+
+Key takeaways: The license file should be included at the top level of every repo ￼.  It should clearly state that Devon Griffith owns the code and that no use is allowed without written consent ￼ ￼.  Anyone reading it sees that they must negotiate directly with Devon for a license ￼.  By citing examples from existing proprietary licenses (such as the MQAttach and kolappannathan templates) and GitHub’s guidance, we ensure the terms are clear, enforceable internationally, and follow best practices for proprietary code on GitHub ￼ ￼.
+
+Sources: We based this license on best-practice examples of proprietary licenses found in industry and developer resources ￼ ￼ ￼.  GitHub’s documentation on licensing and common proprietary license templates guided the format and content ￼ ￼.
