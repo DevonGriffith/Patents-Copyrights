@@ -1,0 +1,154 @@
+# Three-Dimensional Polygonal Semiconductor Architectures
+### Harnessing Timing Dynamics for Neuromorphic Computing, Quantum Devices, and Ultra-Fast On-Chip Communication
+
+**Devon Griffith**  
+Founder and CEO, Kafkaesque Security Inc.  
+**September 29, 2025**
+
+---
+
+## Abstract
+
+Semiconductors engineered into three-dimensional (3D) polygonal geometries can exhibit timing and phase dynamics beyond the reach of conventional planar devices. This paper develops the theory of path-length dependent interference, resonant cavity effects, and intrinsic timing delays in polygonal semiconductors.  
+
+We begin with the **2D dodecagon** and extend to the **3D dodecahedron**, showing how geometry encodes timing spectra. Applications in **neuromorphic computing**, **quantum devices**, and **ultra-fast on-chip communication** are discussed as case studies.
+
+---
+
+## 1. Introduction
+
+The continuous drive for computational efficiency motivates exploring novel semiconductor geometries.  
+Beyond planar devices, **3D polygonal and polyhedral structures** embed timing dynamics into material architecture.  
+
+We analyze first the **2D dodecagon**, then extend the framework to the **3D dodecahedron**.
+
+---
+
+## 2. 2D Dodecagonal Case
+
+### 2.1 Phase Accumulation
+For paths of length $L_i$:
+
+```math
+\phi_i = k L_i, \quad \Delta \phi_{ij} = k(L_i - L_j)
+
+2.2 Path Lengths
+
+For a regular $N$-gon of circumradius $R$:
+L_m = 2R \sin \left(\frac{m \pi}{N}\right)
+For $N = 12$ (dodecagon), multiple distinct $L_m$ yield intrinsic phase shifts.
+
+2.3 Timing Distribution
+
+Transit time:
+t_m = \frac{L_m}{v_d}, 
+\quad 
+T(\omega) = \sum_m w_m e^{-i \omega t_m}
+
+2.4 Figures
+
+Figure 1: Regular dodecagon (2D semiconductor geometry)
+
+      ________
+    /          \
+   /            \
+  |              |
+  |              |
+   \            /
+    \__________/
+
+Figure 2: Interference paths in a 2D dodecagon
+     *----*----*
+    / \   |   / \
+   *---*--+--*---*
+    \ /   |   \ /
+     *----*----*
+
+3. Extension: 3D Dodecahedron Case
+
+3.1 Geometry
+
+A regular dodecahedron has:
+	•	12 pentagonal faces
+	•	20 vertices
+	•	30 edges
+
+Circumradius (for edge length $a$):
+R = \frac{a}{4} \sqrt{3 \left(1 + \sqrt{5}\right)}
+
+3.2 3D Illustration
+
+Figure 3: Wireframe of a regular dodecahedron
+(Red dashed line = body diagonal path)
+        ______
+     .-'      `-.
+   .'            `.
+  /   /\      /\   \
+ ;   /  \    /  \   ;
+ |  |----|--|----|  |
+ ;   \  /    \  /   ;
+  \   \/      \/   /
+   `.            .'
+     `-.______.-'
+
+3.3 Characteristic Path Lengths
+	•	Edge: $L_e = a$
+	•	Face diagonal: $L_f = \varphi a$, where $\varphi = \frac{1 + \sqrt{5}}{2}$
+	•	Body diagonal: $L_b = \frac{\sqrt{3} \varphi a}{ }$
+
+⸻
+
+3.4 Phase and Timing
+\phi_{path} = k L_{path}, \quad t_{path} = \frac{L_{path}}{v_d}
+Distinct families ${L_e, L_f, L_b}$ generate discrete timing levels.
+
+⸻
+
+3.5 Resonances
+
+Resonant modes satisfy:
+m \lambda = 2n L_{path}
+
+Thus, the dodecahedron supports edge, face, and body-diagonal resonance families.
+
+⸻
+
+3.6 3D Illustration
+
+Figure 4: Polyhedral semiconductor (dodecahedron)
+Highlighted: body diagonal path
+   +-------+       
+  / \     / \      
+ +---+---+---+     
+  \ /     \ /      
+   +-------+       
+3.7 Implications
+	•	Neuromorphic: edge/face/body paths act as natural synaptic delays
+	•	Quantum: multipath interference expands Hilbert space encoding
+	•	On-chip communication: built-in phase shifts enable synchronization without complex clock trees
+
+⸻
+
+4. Conclusion
+
+Moving from 2D to 3D polygonal semiconductors expands timing phenomena.
+The dodecahedron provides a concrete case where edge, face, and body diagonals yield discrete timing families.
+
+These are directly applicable to neuromorphic computing, quantum devices, and ultra-fast on-chip communication.
+
+Table of Contents
+	•	Introduction
+	•	2D Dodecagonal Case
+		•	Phase Accumulation
+		•	Path Lengths
+		•	Timing Distribution
+		•	Figures
+		•	3D Dodecahedron Case
+		•	Geometry
+	•	3D Illustration
+		•	Characteristic Paths
+		•	Phase/Timing
+		•	Resonances
+		•	Illustration
+		•	Implications
+	•	Conclusion
