@@ -1,0 +1,199 @@
+# Towards a Reflexive Solution of the Three-Body Problem
+
+**Author:** Devon Griffith  
+**Email:** Devon.Griffith@KafkaSec.com  
+**CEO, Kafkaesque Security Inc.**  
+**Date:** September 26, 2025  
+
+---
+
+## Abstract
+
+The Newtonian three-body problem, long recognized as a cornerstone of celestial mechanics and chaos theory, remains unsolved in closed form. This paper proposes a new pathway: combining symplectic and regularized numerical integrators with Reflexive Agent Mapping (RMAP) and an 18-dimensional reflexive AGI architecture. The approach seeks not only stable integration but the autonomous discovery of new invariants, periodic orbits, and structural symmetries. The result is a framework bridging classical mechanics, modern computation, and reflexive intelligence.
+
+---
+
+## 1. Introduction
+
+The three-body problem has resisted general analytic solution since Poincaré’s foundational work in 1890. Despite known families of exact orbits (e.g., Lagrange, Euler, figure-eight choreographies) and advanced perturbative methods, the global dynamics remain analytically inaccessible. Existing approaches rely on numerical integration, variational principles, or computer-assisted proofs, yet a unified general solution remains elusive.  
+
+This work introduces a hybrid approach. At its base lies a symplectic, Kustaanheimo–Stiefel (KS)-regularized integrator for unrestricted Newtonian three-body dynamics. Above this, RMAP represents each body and the system itself as agents in a self-referential communication network. Finally, a reflexive 18-dimensional AGI memory lattice encodes system states, enabling discovery of hidden invariants and novel orbit families.
+
+---
+
+## 2. Hamiltonian Formulation of the Three-Body Problem
+
+For masses $m_1, m_2, m_3$ with positions $r_i \in \mathbb{R}^3$ and conjugate momenta $p_i$, the Hamiltonian is:
+
+```math
+H(r,p) = \sum_{i=1}^3 \frac{p_i^2}{2 m_i} - G \sum_{1 \leq i < j \leq 3} \frac{m_i m_j}{\|r_i - r_j\|}
+```
+
+Hamilton’s equations give:
+
+```math
+\dot{r}_i = \frac{\partial H}{\partial p_i} = \frac{p_i}{m_i}
+```
+
+```math
+\dot{p}_i = -\frac{\partial H}{\partial r_i} = -G \sum_{j \neq i} \frac{m_i m_j (r_i - r_j)}{\|r_i - r_j\|^3}
+```
+
+This system conserves total energy $H$ and angular momentum $L = \sum_i r_i \times p_i$.
+
+---
+
+## 3. Symplectic Splitting Methods
+
+Split $H = T(p) + V(r)$ with:
+
+```math
+T(p) = \sum_{i=1}^3 \frac{p_i^2}{2 m_i}, \quad V(r) = -G \sum_{1 \leq i < j \leq 3} \frac{m_i m_j}{\|r_i - r_j\|}
+```
+
+Leapfrog update step $\Delta t$:
+
+```math
+p_i^{n+1/2} = p_i^n - \frac{\Delta t}{2} \frac{\partial V}{\partial r_i}\Big|_{r^n}
+```
+
+```math
+r_i^{n+1} = r_i^n + \Delta t \frac{p_i^{n+1/2}}{m_i}
+```
+
+```math
+p_i^{n+1} = p_i^{n+1/2} - \frac{\Delta t}{2} \frac{\partial V}{\partial r_i}\Big|_{r^{n+1}}
+```
+
+This preserves the symplectic two-form and exhibits bounded energy error.
+
+---
+
+## 4. Kustaanheimo–Stiefel Regularization
+
+Transform $r \in \mathbb{R}^3$ to $u \in \mathbb{R}^4$ via:
+
+```math
+r = K(u) = \begin{bmatrix}
+u_1^2 - u_2^2 - u_3^2 + u_4^2 \\
+2(u_1 u_2 + u_3 u_4) \\
+2(u_1 u_3 - u_2 u_4)
+\end{bmatrix}, \quad \|r\| = \|u\|^2
+```
+
+This removes the $1/r$ singularity in close encounters.
+
+---
+
+## 5. Variational Equations and Stability
+
+Perturbations $(\delta r_i, \delta p_i)$ yield:
+
+```math
+\delta \dot{r}_i = \frac{\delta p_i}{m_i}
+```
+
+```math
+\delta \dot{p}_i = -G \sum_{j \neq i} m_i m_j \Bigg[ \frac{\delta r_i - \delta r_j}{\|r_{ij}\|^3} - 3 \frac{(r_{ij} \cdot (\delta r_i - \delta r_j))}{\|r_{ij}\|^5} r_{ij} \Bigg]
+```
+
+Largest Lyapunov exponent:
+
+```math
+\lambda_{max} = \lim_{t \to \infty} \frac{1}{t} \ln \frac{\|\delta X(t)\|}{\|\delta X(0)\|}
+```
+
+---
+
+## 6. Reflexive Agent Mapping (RMAP)
+
+- Each body = agent with $(r_i, p_i)$  
+- Messages = gravitational interactions  
+- Meta-agent monitors invariants $(H, L, R_{CM}, P_{tot})$  
+- Adaptive sub-stepping near collisions  
+- Experimental perturbations probe stability manifolds  
+
+---
+
+## 7. 18-Dimensional Reflexive AGI Layer
+
+At each step:
+
+```math
+z_t = [r_1, r_2, r_3, p_1, p_2, p_3, H, \|L\|, \Delta H, \sigma(\nabla^2 V)]
+```
+
+This layer encodes symmetries, recurrences, and aids in discovering new invariants.
+
+---
+
+## 8. Research Roadmap
+
+1. Implement KS-regularized symplectic integrator  
+2. Validate against Lagrange, Euler, and figure-eight  
+3. Integrate RMAP monitors & adaptive control  
+4. Build 18D reflexive memory & symbolic regression  
+5. Publish periodic families & invariants  
+
+---
+
+## 9. Conclusion
+
+A reflexive, invariant-preserving numerical foundation coupled with agentic memory offers a systematic path to new orbit families and integrals.
+
+---
+
+## Appendix A: Lagrange Equilateral Solution
+
+Three bodies form an equilateral triangle of side $a$, rotating with angular velocity $\omega$.  
+
+```math
+\omega^2 = \frac{G(m_1 + m_2 + m_3)}{a^3}
+```
+
+---
+
+## Appendix B: Euler Collinear Solutions
+
+Three bodies collinear at $(-a, 0, b)$. Equilibrium requires:
+
+```math
+\frac{m_1}{a^2} = \frac{m_3}{b^2}
+```
+
+Rotation rate from balance of forces.
+
+---
+
+## Appendix C: Figure-Eight Orbit
+
+Initial symmetric conditions:
+
+```math
+r_1(0) = (-x_0, 0), \quad v_1(0) = (0, -v_0) \\
+r_2(0) = (x_0, 0), \quad v_2(0) = (0, -v_0) \\
+r_3(0) = (0, 0), \quad v_3(0) = (0, 2 v_0)
+```
+
+with $x_0 \approx 0.97000436$, $v_0 \approx 0.93240737$.  
+
+Numerical integration yields the **figure-eight periodic orbit**:  
+
+![Figure Eight Orbit](figure_eight.png)
+
+---
+
+## Table of Contents
+
+- Introduction  
+- Hamiltonian Formulation  
+- Symplectic Splitting  
+- KS Regularization  
+- Variational Equations  
+- Reflexive Agent Mapping  
+- Reflexive AGI Layer  
+- Research Roadmap  
+- Conclusion  
+- Appendix A: Lagrange Equilateral  
+- Appendix B: Euler Collinear  
+- Appendix C: Figure-Eight Orbit  
