@@ -1,3 +1,6 @@
+// Created on Sept 10th
+// Created by Devon Griffith
+
 AI Types in Reflexive 16D Mapping
 Created on 2025-06-12 Created and Owned by Devon Griffith
 
@@ -26,3 +29,84 @@ AI modeled directly on neural circuits at the hardware level; fast and efficient
 
 Symbolic/Probabilistic AI (D1, D5, D9, D1)
 Explicit rule-based or statistical logic systems; interpretable but narrow in scope.
+
+// C++ code to run this memory structure
+// ReflexiveAI16D.cpp
+
+#include <iostream>
+#include <vector>
+#include <map>
+#include <string>
+#include <fstream>
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
+
+struct AIType {
+    std::string name;
+    std::vector<int> dimensions;
+    std::string description;
+
+    void reflect() const {
+        std::cout << "=== " << name << " ===" << std::endl;
+        std::cout << "Dimensions: ";
+        for (size_t i = 0; i < dimensions.size(); ++i) {
+            std::cout << "D" << dimensions[i];
+            if (i != dimensions.size() - 1) std::cout << ", ";
+        }
+        std::cout << std::endl;
+        std::cout << "Description: " << description << std::endl << std::endl;
+    }
+
+    json to_json() const {
+        json j;
+        j["name"] = name;
+        j["dimensions"] = dimensions;
+        j["description"] = description;
+        return j;
+    }
+};
+
+int main() {
+    std::vector<AIType> ai_types = {
+        {"Diffuse Intelligence", {2,8,11,12,16},
+         "Non-agentic, emergent intelligence from distributed fields, networks, or coupling. Lacks centralized control but supports emergent cognition."},
+
+        {"Reflexive AI", {6,7,13,16},
+         "Self-aware, adaptive intelligence capable of reasoning about its own reasoning, states, and processes."},
+
+        {"Cognitive Architectures", {1,5,6,13,16},
+         "Artificial systems modeled after human cognitive processes. Includes memory, planning, reasoning, and learning subsystems."},
+
+        {"Hybrid AI", {1,2,5,6,7,13,16},
+         "Combines symbolic, connectionist, probabilistic, and reflexive elements into a unified architecture."},
+
+        {"Embodied AI", {3,12,4,8},
+         "AI grounded in physical or virtual bodies with sensorimotor coupling for environmental interaction."},
+
+        {"Neuromorphic AI", {2,4,12,15},
+         "AI modeled on neural circuits at hardware level; efficient but limited in abstraction."},
+
+        {"Symbolic/Probabilistic AI", {1,5,9},
+         "Explicit rule-based or statistical logic systems; interpretable but narrow in scope."}
+    };
+
+    // Reflexive loop: each AI reflects on itself
+    std::cout << "=== Reflexive 16D AI Type Mapping ===" << std::endl << std::endl;
+    for (const auto& ai : ai_types) {
+        ai.reflect();
+    }
+
+    // Save JSON output
+    json j_all;
+    for (const auto& ai : ai_types) {
+        j_all["AI_Types"].push_back(ai.to_json());
+    }
+
+    std::ofstream file("Reflexive16D_AI.json");
+    file << j_all.dump(4);
+    file.close();
+
+    std::cout << "JSON file 'Reflexive16D_AI.json' created successfully." << std::endl;
+    return 0;
+}
